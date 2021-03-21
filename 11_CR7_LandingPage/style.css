@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ff2562;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(41% 0, 100% 0, 100% 100%, 84% 100%);
+    animation: fade-in 0.5s ease-in forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+section .content {
+    position: relative;
+    padding: 100px 50px 100px 150px;
+    box-sizing: border-box;
+    animation: left-in 0.5s ease-in forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+section .content p {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+section .content a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #ff2562;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+section .content h2 {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 800;
+}
+
+section .imgBx {
+    position: relative;
+    padding-right: 100px;
+}
+
+section .imgBx img {
+    max-width: 500px;
+    animation: fade-in 0.5s ease-in forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+section .sci {
+    position: absolute;
+    bottom: 75px;
+    left: 150px;
+    display: flex;
+    animation: left-in 0.5s ease-in forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+section .sci li {
+    list-style-type: none;
+}
+
+section .sci li a {
+    text-decoration: none;
+    color: #999;
+    margin-right: 30px;
+    font-size: 1em;
+}
+
+section .sci li a:hover {
+    color: #fff;
+}
+
+section .nav {
+    position: absolute;
+    top: 75px;
+    left: 150px;
+    display: flex;
+    border-left: 5px solid #ff2562;
+    padding-left: 20px;
+    animation: left-in 0.5s ease-in forwards;
+    animation-delay: 0s;
+    opacity: 0;
+}
+
+section .nav li {
+    list-style-type: none;
+}
+
+section .nav li a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 30px;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+section .nav li a.active,
+section .nav li a:hover {
+    color: #ff2562;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes left-in {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@media (max-width:1040px) {
+    .menuicon {
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        width: 30px;
+        height: 30px;
+        background: url("img/menu.png");
+        filter: invert(1);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .menuicon.active {
+        background: url("img/close.png");
+        filter: invert(1);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 10000;
+    }
+}

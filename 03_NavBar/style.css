@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #24252A;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10%;
+    min-height: 8vh;
+    align-items: center;
+    color: #edf0f1;
+}
+li a{
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #edf0f1;
+}
+.logo{
+    cursor: pointer;
+}
+.nav_links{
+    display: flex;
+    text-transform:capitalize;
+    width: 30%;
+    margin-top: 20px;
+}
+
+.nav_links li{
+    list-style: none;
+    margin-right: 25px;
+}
+.nav_links li a{
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    color: #0088a9;
+}
+
+.contact button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-color: #24252A;
+    font-weight: 500;
+    padding: 5px;
+    border: 1px white solid;
+    border-radius: 15px;  
+    margin-top: 20px;
+    color:#edf0f1 ;
+    cursor: pointer;
+    transition: all 0.3s ease-in 0s;
+}
+
+.contact button:hover{
+    background-color: #0088a9;
+}
